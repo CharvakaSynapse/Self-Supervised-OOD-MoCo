@@ -47,9 +47,9 @@ $$
 
 ### 2. Energy Score  
 Uses logsumexp of logits as an uncalibrated “confidence”:
-$$
+
 E(\mathbf{x}) = -T \cdot \log\left(\sum_{c=1}^C \exp(z_c / T)\right)
-$$
+
 
 ### 3. Energy-Gradient Score (EGS)  
 Blends normalized energy and gradient-norm information:
