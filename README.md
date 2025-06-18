@@ -41,9 +41,8 @@ We benchmark three popular OOD scoring techniques—**Mahalanobis Distance, Ener
 
 ### 1. Mahalanobis Distance  
 Measures distance in feature space to the in-distribution mean:
-$$
-D_M(\mathbf{x}) = \sqrt{(\mathbf{f} - \mu)^T \Sigma^{-1} (\mathbf{f} - \mu)}
-$$
+D_M(\mathbf{x}) = \sqrt{(\mathbf{f} - \boldsymbol{\mu})^\top \boldsymbol{\Sigma}^{-1} (\mathbf{f} - \boldsymbol{\mu})}
+
 
 ### 2. Energy Score  
 Uses logsumexp of logits as an uncalibrated “confidence”:
