@@ -87,13 +87,20 @@ EGS(x) = α * Ē(x) + (1 - α) * Ĝ(x)
 
 ---
 
-## 🔗 Citation & Reference
+## 🔗 Citation & References
 
-If you use this repo or find it helpful, please cite or star ⭐️!  
-Based on ideas from:  
-- [MoCo: Momentum Contrast for Unsupervised Visual Representation Learning](https://arxiv.org/abs/1911.05722)
-- [Energy-based Out-of-distribution Detection](https://arxiv.org/abs/2010.03759)
+If you use this repo or find it helpful, please **cite**:
 
+```bibtex
+@software{bandyopadhyay_2025_moco_energy_egs_ood,
+  author  = {Bandyopadhyay, Subhasish},
+  title   = {Self-Supervised Out-of-Distribution Detection with MoCo, Energy \& EGS},
+  year    = {2025},
+  version = {v1.0},
+  publisher = {GitHub},
+  url     = {REPO_URL},        % ← replace with your repository URL
+  note    = {GitHub repository},
+}
 ---
 
 ## 🙏 Acknowledgements
