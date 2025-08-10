@@ -39,34 +39,35 @@ We benchmark three popular OOD scoring techniques—**Mahalanobis Distance, Ener
 
 ## 📊 Methods
 
-### 1. Mahalanobis Distance  
+### 1. Mahalanobis Distance
 Measures distance in feature space to the in-distribution mean:
 
-D_M(x) = sqrt((f - μ)^T Σ⁻¹ (f - μ))
+\[
+D_M(x) \;=\; \sqrt{(f(x)-\mu)^\top \,\Sigma^{-1}\,(f(x)-\mu)}
+\]
 
+### 2. Energy Score
+Uses log-sum-exp of logits as an uncalibrated “confidence”:
 
-### 2. Energy Score  
-Uses logsumexp of logits as an uncalibrated “confidence”:
+\[
+E(x) \;=\; -\,T \cdot \log\!\Big(\sum_{c} \exp(z_c / T)\Big)
+\]
 
-E(x) = -T * log( ∑_c exp(z_c / T) )
-
-
-### 3. Energy-Gradient Score (EGS)  
+### 3. Energy-Gradient Score (EGS)
 Blends normalized energy and gradient-norm information:
 
-EGS(x) = α * Ē(x) + (1 - α) * Ĝ(x)
-
----
-
+\[
+\mathrm{EGS}(x) \;=\; \alpha \,\hat{E}(x) \;+\; (1-\alpha)\,\hat{G}(x)
+\]
 
 ---
 
 ## 🖼️ Example Visualizations
 
-- **Histograms**: Show clear OOD region separation for Energy/EGS
-- **ROC & PR Curves**: EGS > Energy > Mahalanobis
-- **t-SNE**: Visualizes ID/OOD clustering
-- **Calibration**: Model is well-calibrated on ID
+- **Histograms**: Show clear OOD region separation for Energy/EGS  
+- **ROC & PR Curves**: EGS > Energy > Mahalanobis  
+- **t-SNE**: Visualizes ID/OOD clustering  
+- **Calibration**: Model is well-calibrated on ID  
 - **"Hard" OOD Cases**: Intuitive grid of most ambiguous samples
 
 ---
@@ -101,16 +102,3 @@ If you use this repo or find it helpful, please **cite**:
   url     = {REPO_URL},        % ← replace with your repository URL
   note    = {GitHub repository},
 }
----
-
-## 🙏 Acknowledgements
-
-Thanks to the open-source community for datasets, models, and inspiration!
-
----
-
-## License
-
-MIT
-
-
