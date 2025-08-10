@@ -39,26 +39,22 @@ We benchmark three popular OOD scoring techniques—**Mahalanobis Distance, Ener
 
 ## 📊 Methods
 
-### 1. Mahalanobis Distance
+### 1. Mahalanobis Distance  
 Measures distance in feature space to the in-distribution mean:
 
-\[
-D_M(x) \;=\; \sqrt{(f(x)-\mu)^\top \,\Sigma^{-1}\,(f(x)-\mu)}
-\]
+D_M(x) = sqrt((f - μ)^T Σ⁻¹ (f - μ))
 
-### 2. Energy Score
-Uses log-sum-exp of logits as an uncalibrated “confidence”:
 
-\[
-E(x) \;=\; -\,T \cdot \log\!\Big(\sum_{c} \exp(z_c / T)\Big)
-\]
+### 2. Energy Score  
+Uses logsumexp of logits as an uncalibrated “confidence”:
 
-### 3. Energy-Gradient Score (EGS)
+E(x) = -T * log( ∑_c exp(z_c / T) )
+
+
+### 3. Energy-Gradient Score (EGS)  
 Blends normalized energy and gradient-norm information:
 
-\[
-\mathrm{EGS}(x) \;=\; \alpha \,\hat{E}(x) \;+\; (1-\alpha)\,\hat{G}(x)
-\]
+EGS(x) = α * Ē(x) + (1 - α) * Ĝ(x)
 
 ---
 
