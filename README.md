@@ -94,7 +94,6 @@ If you use this repo or find it helpful, please **cite**:
   title   = {Self-Supervised Out-of-Distribution Detection with MoCo, Energy \& EGS},
   year    = {2025},
   version = {v1.0},
-  publisher = {GitHub},
-  url     = {REPO_URL},        % ← replace with your repository URL
-  note    = {GitHub repository},
+  url     = {https://github.com/CharvakaSynapse/Self-Supervised-OOD-MoCo/edit/main},       
+  
 }
